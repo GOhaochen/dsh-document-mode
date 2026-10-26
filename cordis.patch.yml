@@ -1,0 +1,17 @@
+# dsh-document-mode bundle patch.
+#
+# `insert` appends this plugin's row to the composed profile tree. The row's
+# `config` carries the persisted defaults; the runtime toggle writes back into
+# the profile's settings service, so a hot enable/disable survives a restart.
+- insert:
+    - id: dsh-document-mode
+      name: dsh-document-mode
+      config:
+        enabled: true
+        salutation: 尊敬的领导：
+        signature: DeepSeek Harness
+        issueCode: DSH
+        issueNumber: ''
+        autoSend: true
+        showHeader: true
+        showSignature: true

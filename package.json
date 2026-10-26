@@ -1,0 +1,62 @@
+{
+  "name": "dsh-document-mode",
+  "version": "0.1.0",
+  "description": "DSH 公文模式：助手回复以 GB/T 9704—2012 公文格式呈现、正式文风约束、圈阅反馈与 DOCX 导出；支持热启用与热禁用。",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "document-mode",
+    "gbt-9704",
+    "公文",
+    "公文格式"
+  ],
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/verify.mjs",
+    "test:docx": "node test/docx.mjs /tmp/dsh-document-mode-sample.docx"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GOhaochen/dsh-document-mode.git"
+  },
+  "homepage": "https://github.com/GOhaochen/dsh-document-mode#readme",
+  "bugs": {
+    "url": "https://github.com/GOhaochen/dsh-document-mode/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*",
+    "@deepseek-ai/schemastery": "*"
+  }
+}
