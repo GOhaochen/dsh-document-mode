@@ -15,3 +15,5 @@
         autoSend: true
         showHeader: true
         showSignature: true
+        thinkingZh: true
+        essayTone: true
