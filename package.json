@@ -1,6 +1,6 @@
 {
   "name": "dsh-document-mode",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "DSH 公文模式：助手回复以 GB/T 9704—2012 公文格式呈现、正式文风约束、圈阅反馈与 DOCX 导出；支持热启用与热禁用。",
   "keywords": [
     "dsh-plugin",
